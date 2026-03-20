@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Gesso & Drywall Pro</title>
-
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -11,68 +10,112 @@
 <body>
 
 <header class="header-topo">
-
-  <img src="logo.jpeg" class="logo" 
+  <img src="logo.jpeg" class="logo" alt="Logo"> 
   <div class="info">
-
     <h1>🧱 Gesso & Drywall</h1>
     <p>Acabamento profissional para sua obra</p>
-    </div>
-
+  </div>
 </header>
 
+<section class="servicos">
+  <h2>🔧 Forro de gesso acartonado e estruturado</h2>
 
-<section class="servicos reveal">
-  <h2>🔧 Serviços</h2>
+  <div class="carrossel">
+    <div class="slides" id="slides">
+      <div class="slide">
+        <img src="img5.jpeg" alt="Gesso Acartonado">
+        <div class="legenda">
+          <h3>Forro de Gesso Acartonado</h3>
+          <p>Acabamento moderno e sofisticado.</p>
+        </div>
+      </div>
 
-  <div class="card reveal">
-    <h3>Forro de Gesso</h3>
-    <p>Acabamento moderno e elegante</p>
-  </div>
+      <div class="slide">
+        <img src="img6.jpeg" alt="Estrutura Drywall">
+        <div class="legenda">
+          <h3>Estrutura em drywall</h3>
+          <p>Sofisticação e resistência.</p>
+        </div>
+      </div>
 
-  <div class="card reveal">
-    <h3>Drywall</h3>
-    <p>Paredes rápidas e eficientes</p>
-  </div>
+      <div class="slide"> 
+        <img src="img7.jpeg" alt="Forro estruturado">
+        <div class="legenda">
+          <h3>Forro estruturado</h3>
+          <p>Alta resistência e durabilidade.</p>
+        </div>
+      </div>
 
-  <div class="card reveal">
-    <h3>Sancas</h3>
-    <p>Detalhes que valorizam o ambiente</p>
+      <div class="slide">
+        <img src="img12.jpeg" alt="Projeto duas estruturas">
+        <div class="legenda">
+          <h3>Projeto com duas estruturas</h3>
+          <p>Parede de drywall com lã de vidro e dupla estrutura.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img13.jpeg" alt="Ambiente comercial">
+        <div class="legenda">
+          <h3>Ambiente comercial</h3>
+          <p>Execução rápida com excelente acabamento.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img10.jpeg" alt="Forro removível">
+        <div class="legenda">
+          <h3>Forro removível com placa de fibra mineral.</h3>
+          <p>Acabamento limpo e elegante.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img11.jpeg" alt="Forro termoacústico">
+        <div class="legenda">
+          <h3>Forro removível com placa de fibra mineral</h3>
+          <p>Possui propriedades termoacústicas e de segurança.</p>
+        </div>
+      </div>
+    </div> <button class="prev" onclick="voltar()">❮</button>
+    <button class="next" onclick="avancar()">❯</button>
+
+    <div class="dots">
+      <span onclick="irPara(0)"></span>
+      <span onclick="irPara(1)"></span>
+      <span onclick="irPara(2)"></span>
+      <span onclick="irPara(3)"></span>
+      <span onclick="irPara(4)"></span>
+      <span onclick="irPara(5)"></span>
+      <span onclick="irPara(6)"></span>
+    </div>
   </div>
 </section>
 
 <section class="galeria reveal">
   <h2>📸 Trabalhos realizados</h2>
-
   <img src="img1.jpg" alt="Forro de gesso moderno">
-<img src="img2.jpg" alt="Parede drywall instalada">
-<img src="img3.jpg" alt="Drywall com acabamento moderno">
-
+  <img src="img2.jpg" alt="Parede drywall">
+  <img src="img3.jpg" alt="Drywall com acabamento moderno">
 </section>
 
 <section class="contato reveal">
-  
   <h2>📲 Solicite um orçamento</h2>
-
   <p class="email">
-  📧 <a href="mailto:leonardo9112@gmail.com">
-    leonardo9112@gmail.com
-  </a>
-</p>
+    📧 <a href="mailto:leonardo9112@gmail.com">leonardo9112@gmail.com</a>
+  </p>
 
   <div class="botoes">
-
-  <a class="whatsapp" href="https://wa.me/5532991499986" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <a class="instagram" href="https://instagram.com/seuinsta" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-</div>
+    <a class="whatsapp" href="https://wa.me/5532991499986" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="instagram" href="https://www.instagram.com/llopes_drywall?igsh=eWR5bnJkcWtuZDZi" target="_blank">
+      <i class="fab fa-instagram"></i> 
+    </a>
+  </div>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
