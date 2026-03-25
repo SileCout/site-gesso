@@ -48,3 +48,5 @@ window.addEventListener("scroll", reveal);
 
 // Inicializa o estado das bolinhas
 atualizar();
+
+reveal();

@@ -1,6 +1,6 @@
-/* =========================================
-   1. RESET & CONFIGURAÇÕES GERAIS
-   ========================================= */
+html {
+    scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -308,10 +308,9 @@ body {
 }
 
 /* LABELS */
-.item span,
 .depois {
   position: relative;
-  display: inline-block; /* 🔥 ESSENCIAL */
+  display: inline-block;
 }
 .depois span {
     position: absolute;
@@ -339,8 +338,9 @@ body {
 }
 .item img,
 .depois img {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20px);
+  will-change: transform, opacity;
   animation: subirFade 0.8s ease forwards;
 }
 
@@ -363,7 +363,7 @@ body {
 }
 .item span,
 .depois span {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(10px);
   animation: labelFade 0.6s ease forwards;
   animation-delay: 0.8s;
@@ -377,6 +377,78 @@ body {
 }
 .item img:hover,
 .depois img:hover {
-  transform: scale(1.03);
-  transition: 0.3s ease;
+  transform: translateY(0) scale(1.03);
+  transition: transform 0.3s ease;
+}
+.propaganda-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1a1a1a; /* Mantendo seu fundo escuro */
+    color: white;
+    font-family: sans-serif;
+}
+
+.propaganda-container h2 {
+    color: #ffd700; /* Um tom de destaque (ex: dourado/amarelo) para o título */
+    margin-bottom: 10px;
+}
+
+.beneficios {
+    max-width: 600px;
+    margin: 30px auto; /* Centraliza o bloco da lista */
+    text-align: left; /* Texto da lista alinhado à esquerda para leitura fácil */
+}
+
+.beneficios ul {
+    list-style: none; /* Tira as bolinhas padrão */
+    padding: 0;
+}
+
+.beneficios li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.beneficios li::before {
+    content: "✔️"; /* Ícone simples antes de cada item */
+    position: absolute;
+    left: 0;
+}
+/* da galeria de fotos */
+/* Container que segura todas as fotos */
+.grade-fotos {
+    display: grid;
+    /* Cria colunas de no máximo 250px. Se a tela diminuir, elas se ajustam sozinhas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; /* Espaço entre as fotos */
+    padding: 20px;
+}
+
+/* Ajuste individual de cada foto */
+.item-galeria {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-galeria img {
+    width: 100%;       /* Ocupa toda a largura da coluna de 250px */
+    height: 250px;      /* Altura fixa para todas ficarem iguais */
+    object-fit: cover;  /* Corta a imagem levemente para preencher o quadrado sem esticar */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: transform 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito opcional: a foto aumenta um pouco quando passa o mouse */
+.item-galeria img:hover {
+    transform: scale(1.05);
+}
+
+.item-galeria figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
 }
